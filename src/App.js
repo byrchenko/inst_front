@@ -1,14 +1,13 @@
 import React from 'react';
-import BrowserRouter from "react-router-dom/modules/BrowserRouter";
-import Route from "react-router/modules/Route";
+import {BrowserRouter, Route} from "react-router-dom";
 import Feed from "./Feed";
+
+export const USER_ID = 1;
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path={"/feed"}>
-        <Feed />
-      </Route>
+      <Route path={"/feed"} component={Feed} />
     </BrowserRouter>
   );
 }
