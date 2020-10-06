@@ -24,7 +24,7 @@ const Post = ({id, author, images, likes, likesCount: postLikesCount, saved, des
 
         if (!isLiked) {
             // request for add like
-            request = fetch("http://localhost:3002/posts/addLike/", {
+            request = fetch("https://inst-back.herokuapp.com/posts/addLike/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const Post = ({id, author, images, likes, likesCount: postLikesCount, saved, des
             setLikesCount(prev => prev + 1);
             setIsLiked(prev => !prev);
         } else {
-            request = fetch("http://localhost:3002/posts/removeLike/", {
+            request = fetch("https://inst-back.herokuapp.com/posts/removeLike/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

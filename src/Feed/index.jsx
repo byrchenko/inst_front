@@ -15,7 +15,7 @@ const Feed = () => {
     React.useEffect(() => {
         console.log("fetching posts")
 
-        fetch(`http://localhost:3002/posts?offset=${offset}&limit=${limit}`)
+        fetch(`https://inst-back.herokuapp.com/posts?offset=${offset}&limit=${limit}`)
             .then(res =>  res.json())
             .then(parsed => {
                 if (parsed.length < limit) {
