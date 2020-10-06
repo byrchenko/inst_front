@@ -7,7 +7,7 @@ export const USER_ID = 1;
 function App() {
   return (
     <BrowserRouter>
-      <Route path={"/feed"} component={Feed} />
+      <Route path={"/"} component={Feed} />
     </BrowserRouter>
   );
 }
